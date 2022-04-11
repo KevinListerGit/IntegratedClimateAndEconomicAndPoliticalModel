@@ -1,0 +1,28 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+
+
+<html>
+<head>
+<title>
+    Kevin's web site
+</title>
+    <h1> Kevin's web site</h1>
+
+</head>
+<body>
+
+    <div id = "content", name="content">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+    <p>This is the list </p>
+    <p>{{name}}</p>
+</body>
+
+
+
+</html>

@@ -1,0 +1,44 @@
+{% extends "main/base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+{% block content %}
+
+
+
+<ul>
+  {% for all in ls %}
+
+    <h1> {{ all.id }} {{all.text }}  </h1>
+            <ul>
+            <li>{{all.ToDoList.name}}</li>
+                <li>Complete = {{all.complete}}</li>
+
+         {% for instruction in all.InstructionDetail.all %}
+                <li> Instruction = {{instruction}}</li>
+            {% endfor %}
+
+
+            </ul>
+
+
+
+    {% endfor %}
+
+
+</ul>
+
+
+
+{% endblock%}

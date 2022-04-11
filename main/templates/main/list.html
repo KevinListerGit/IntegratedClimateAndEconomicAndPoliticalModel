@@ -1,0 +1,40 @@
+{% extends "main/base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+{% block content %}
+
+
+
+<ul>
+    {% for all in ls %}
+
+    <li> {{ all.id }} {{all }}  </li>
+    <li>{{all.Item.text}}</li>
+
+
+        {% for item in ls.item_set.all %}
+
+            <li>{{all.item.text}}</li>
+
+        {% endfor %}
+
+
+
+    {% endfor %}
+</ul>
+
+
+
+{% endblock%}

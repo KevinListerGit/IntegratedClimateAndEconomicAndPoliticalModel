@@ -1,0 +1,26 @@
+{% extends "main/base.html" %}
+
+
+
+
+
+{% block content %}
+
+
+
+<ul>
+
+    {% for all in todo %}
+
+    <h1> {{ all.id }} {{all.name }}   </h1>
+
+        {% for all in todo.item_set.all %}
+        <ul> {{all.text}}</ul>
+        {% endfor %}
+    {% endfor %}
+
+</ul>
+
+
+
+{% endblock%}

@@ -1,0 +1,9 @@
+{{todolist}}
+{{itemlist}}
+
+<h1>{{ todolist.name }}</h1>
+<ul>
+{% for il in itemlist %}
+    <li>{{ il }}</li>
+{% endfor %}
+</ul>
